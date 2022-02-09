@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { OrderContextProvider } from './context/OrderContextProvider';
 
 ReactDOM.render(
   <React.StrictMode>
+    <BrowserRouter>
+    
+    <OrderContextProvider>
+
     <App />
+
+    </OrderContextProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
